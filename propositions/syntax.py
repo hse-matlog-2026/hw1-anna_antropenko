@@ -341,10 +341,10 @@ class Formula:
                 next = i + 1
                 while next < len(string) and string[next].isdecimal():
                     next += 1
-                res = string[i:next]
-                if not is_variable(res):
+                leaf = string[i:next]
+                if not is_variable(leaf):
                     raise ValueError('Invalid variable')
-                res.append(res)
+                res.append(leaf)
                 i = next
                 continue
 
