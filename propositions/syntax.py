@@ -305,11 +305,12 @@ class Formula:
         res = []
         i = 0
         while i < len(string):
+            symb = string[i]
             if symb == 'T' or symb == 'F':
                 res.append(symb)
                 i += 1
                 continue
-            symb = string[i]
+            
             if symb == '~':
                 res.append('~')
                 i += 1
